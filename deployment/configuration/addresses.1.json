@@ -20,6 +20,10 @@
     "name": "KEEPER_REBALANCE"
   },
   {
+    "addr": "0x0220646F0acdE22b6D46E69B0f65a6362B0dfeb0 ",
+    "name": "KEEPER_LOSS"
+  },
+  {
     "addr": "0x383965940c950008a4B67BfaA477Fdf6AC91a7F7",
     "name": "PAUSER_1"
   },
@@ -740,7 +744,43 @@
     "addr": "0x1ad60c683EA27Bef74B2C27c221486880e07592A"
   },
   {
+    "name": "FARM_LIQUIDATION_V2",
+    "addr": "0xda40ce7DdDBE7D54A106D32575b2CCF41dDb1A11"
+  },
+  {
     "name": "RWA_RATE_MANAGER",
     "addr": "0x11F6FAb3f4D8635880C3e80cbae8AEF8136D4189"
+  },
+  {
+    "name": "ORACLE_MIDAS_MGLOBAL",
+    "addr": "0xd3a34f0416C455420b00B828e8f2C35944f6a6f5"
+  },
+  {
+    "name": "ORACLE_MIDAS_MGLOBAL_V2",
+    "addr": "0xe445A2147E66710a02583051a826F30b2C2Ab4d8"
+  },
+  {
+    "name": "FARM_MIDAS_MGLOBAL",
+    "addr": "0x7373A7ce3C023C56Cb66747AFbdF827627D31679"
+  },
+  {
+    "name": "FARM_CAP_LIQUID",
+    "addr": "0x35F9EbDc02F936e199826778bc06A13272a06B87"
+  },
+  {
+    "name": "FARM_CAP_LIQUID_V2",
+    "addr": "0xAc21B22B5aEb11bc32De4ecF59E4538fCa48b694"
+  },
+  {
+    "name": "FARM_SILVER",
+    "addr": "0x277FdF6Dc5c53C5c2828188Da84B9593A50884C1"
+  },
+  {
+    "name": "FARM_MORPHO_SENTORA_PRIME_MAIN",
+    "addr": "0x75381e9Bc6B908a2e9bC31A535fC48CeCeAc568E"
+  },
+  {
+    "name": "FARM_SILVER_ESCROW",
+    "addr": "0x1532f095F8daa79d22a2475FD50c7109add394bB"
   }
 ]
