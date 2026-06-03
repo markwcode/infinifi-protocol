@@ -164,6 +164,18 @@
     "name": "ERC20_MORPHO"
   },
   {
+    "addr": "0x80ac24aA929eaF5013f6436cdA2a7ba190f5Cc0b",
+    "name": "ERC20_SYRUPUSDC"
+  },
+  {
+    "addr": "0x98A878b1Cd98131B271883B390f68D2c90674665",
+    "name": "ERC20_APXUSD"
+  },
+  {
+    "addr": "0x38EEb52F0771140d10c4E9A9a72349A329Fe8a6A",
+    "name": "ERC20_APYUSD"
+  },
+  {
     "addr": "0xb576765fB15505433aF24FEe2c0325895C559FB2",
     "name": "ERC4626_MORPHO_SENTORA_PYUSD"
   },
@@ -434,10 +446,6 @@
   {
     "addr": "0x08ce17d83b3BEbb1C43A55a054d656ecBEbAffA7",
     "name": "FARM_COWSWAP_SUSDE"
-  },
-  {
-    "addr": "0x80ac24aA929eaF5013f6436cdA2a7ba190f5Cc0b",
-    "name": "ERC20_SYRUPUSDC"
   },
   {
     "addr": "0x56af923033cbe7F6b83AEb9cBD7621076Fb26647",
@@ -770,6 +778,14 @@
   {
     "name": "FARM_CAP_LIQUID_V2",
     "addr": "0xAc21B22B5aEb11bc32De4ecF59E4538fCa48b694"
+  },
+  {
+    "addr": "0x2b77C71d093e241b8dC0a21e941Ff0D5cB1b115D",
+    "name": "FARM_PENDLEV3_APXUSD_18JUN26"
+  },
+  {
+    "addr": "0x804E50d77F117FeC5aa7222078B75F67e6A1Ec24",
+    "name": "FARM_PENDLEV3_APYUSD_18JUN26"
   },
   {
     "name": "FARM_SILVER",

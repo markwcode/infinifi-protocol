@@ -80,25 +80,20 @@ contract MidasFarm is MultiAssetFarmV2, IMaturityFarm {
         uint256 totalAssets = super.assets();
 
         // add pending deposit request amount if still pending
-        uint256 _pendingDepositRequestId = pendingDepositRequestId;
-        if (_pendingDepositRequestId != 0) {
-            IMidasManageableVault.DepositRequest memory depositRequest =
-                IMidasDepositVault(depositVault).mintRequests(_pendingDepositRequestId);
-            if (depositRequest.status == IMidasManageableVault.RequestStatus.Pending) {
-                // use amount after fees since that's what will be converted to mTokens
-                totalAssets += depositRequest.usdAmountWithoutFees / decimalsScalingFactor;
-            }
+        IMidasManageableVault.DepositRequest memory depositRequest =
+            IMidasDepositVault(depositVault).mintRequests(pendingDepositRequestId);
+
+        if (depositRequest.status == IMidasManageableVault.RequestStatus.Pending) {
+            // use amount after fees since that's what will be converted to mTokens
+            totalAssets += depositRequest.usdAmountWithoutFees / decimalsScalingFactor;
         }
 
         // add pending redeem request amount if still pending
-        uint256 _pendingRedeemRequestId = pendingRedeemRequestId;
-        if (_pendingRedeemRequestId != 0) {
-            IMidasManageableVault.RedeemRequest memory redeemRequest =
-                IMidasRedeemVault(redeemVault).redeemRequests(_pendingRedeemRequestId);
-            if (redeemRequest.status == IMidasManageableVault.RequestStatus.Pending) {
-                // redeem amount is in mToken
-                totalAssets += convert(mToken, assetToken, redeemRequest.amountMToken);
-            }
+        IMidasManageableVault.RedeemRequest memory redeemRequest =
+            IMidasRedeemVault(redeemVault).redeemRequests(pendingRedeemRequestId);
+        if (redeemRequest.status == IMidasManageableVault.RequestStatus.Pending) {
+            // redeem amount is in mToken
+            totalAssets += convert(mToken, assetToken, redeemRequest.amountMToken);
         }
 
         return totalAssets;
@@ -200,4 +195,3 @@ contract MidasFarm is MultiAssetFarmV2, IMaturityFarm {
         require(assetsOut >= minAssetsOut, SlippageTooHigh(minAssetsOut, assetsOut));
     }
 }
-
