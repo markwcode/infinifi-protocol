@@ -24,7 +24,7 @@ contract ERC4626Farm is Farm {
     }
 
     /// @notice Returns the total assets in the farm + the rebasing balance of the aToken
-    function assets() public view override returns (uint256) {
+    function assets() public view virtual override returns (uint256) {
         uint256 vaultShares = ERC20(vault).balanceOf(address(this));
         return ERC4626(vault).convertToAssets(vaultShares);
     }
